@@ -1,0 +1,240 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+/* App Layout */
+.app {
+  display: flex;
+  height: 90vh;
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  background: white;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.sidebar p {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.sidebar .restart-button {
+  margin-top: 20px;
+  background-color: #61dafb;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.sidebar .restart-button:hover {
+  background-color: #4faadf;
+}
+
+/* Quiz Container */
+.quiz-container {
+  flex: 1;
+  padding: 30px 40px;
+  text-align: center;
+  overflow-y: auto;
+}
+
+/* Question Number */
+h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Question Text */
+.question-text {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Timer & Progress */
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  width: 100%;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.progress-bar {
+  height: 10px;
+  background: linear-gradient(135deg, #764ba2, #667eea);
+  width: 30%; /* Adjust dynamically */
+  transition: width 0.3s ease;
+}
+
+/* Answer Buttons */
+.answer-buttons, .options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.answer-button, .options button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.answer-button:hover, .options button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.5);
+}
+
+/* Correct & Wrong Answer Styles */
+.answer-button.correct, .options button.correct {
+  background: #4caf50;
+}
+
+.answer-button.wrong, .options button.incorrect {
+  background: #f44336;
+}
+
+/* Welcome Page Styling */
+.welcome-page {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.topic-select, .difficulty-select, .question-count-input {
+  margin: 15px 0;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 80%;
+  max-width: 300px;
+}
+
+.start-button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.start-button:hover {
+  background: linear-gradient(135deg, #556cd6, #5b3b8c);
+}
+
+/* Quiz Completed Page */
+.quiz-completed {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.quiz-completed h1 {
+  color: #764ba2;
+  font-size: 2.5rem;
+}
+
+.quiz-completed p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.quiz-completed .restart-button {
+  margin-top: 20px;
+  background-color: #61dafb;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background 0.3s ease;
+}
+
+.quiz-completed .restart-button:hover {
+  background-color: #4faadf;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .app {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    text-align: center;
+    box-shadow: none;
+  }
+
+  .quiz-container {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .answer-buttons, .options {
+    grid-template-columns: 1fr;
+  }
+
+  .topic-select, .difficulty-select, .question-count-input {
+    width: 100%;
+  }
+}
